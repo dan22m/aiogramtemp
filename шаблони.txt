@@ -1,0 +1,18 @@
+# СКРИПТ ЛОГЕРА
+await dp.bot.send_message(config.log_chat,
+                                  f"[ <a href='t.me/{message.chat.username}'>{message.chat.title}</a> ]\n"
+                                  f"\U0001F464 <a href='tg://user?id={message.from_user.id}'>{message.from_user.full_name}</a>\n"
+                                  f"use /info\n\n"
+                                  f"user <code>#{message.from_user.id}</code> \nchat <code>#{message.chat.id}</code>",
+                                  disable_web_page_preview=True
+                                  )
+        logger.info(
+            f"\n---------------------------------------------------------\n"
+            f"[ t.me/{message.chat.username}:{message.chat.title} ]\n"
+            f"t.me/{message.from_user.username}:{message.from_user.full_name}\n"
+            f"use /info\n"
+            f"user #{message.from_user.id}\n"
+            f"chat #{message.chat.id}"
+            f"\n---------------------------------------------------------\n"
+        )
+
